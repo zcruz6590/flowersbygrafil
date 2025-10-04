@@ -20,3 +20,22 @@ body {
     padding: 10px 0;
     text-align: center;
 }
+
+.topnav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4f4e3;
+    padding: 5px 20px;
+}
+
+/* Make the search SVG smaller and vertically center it */
+.search-icon {
+    display: flex;
+    align-items: center;
+}
+.search-icon img {
+    width: 24px; /* desired visible size */
+    height: auto; /* preserve aspect ratio */
+    display: block;
+}
