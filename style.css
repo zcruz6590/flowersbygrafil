@@ -1,8 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Moneta, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header1 {
@@ -35,7 +40,42 @@ body {
     align-items: center;
 }
 .search-icon img {
-    width: 24px; /* desired visible size */
+    width: 30px; /* desired visible size */
     height: auto; /* preserve aspect ratio */
     display: block;
+}
+
+.bottom-nav {
+    font-family: 'ubuntu sans', sans-serif;
+    font-size: 1.10rem;
+    display: flex;
+    justify-content: center;
+    /* Responsive gap: scales with viewport but clamps between 12px and 36px */
+    gap: clamp(12px, 3vw, 36px);
+    background-color: #f4f4e3;
+    padding: 10px 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    height: 60vh;
+}
+
+.left, .right{
+    border-style: solid;
+    width: 50vw;
+}
+
+.left {
+    background-image: url('images/autumn1.png');
+    background-repeat: no-repeat;   
+    background-position: center center; 
+    background-size: cover;
+}
+
+.right {
+    background-color: #f48460;
 }
