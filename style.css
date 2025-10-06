@@ -78,4 +78,18 @@ a {
 
 .right {
     background-color: #f48460;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+h1 {
+    font-family: "Italiana", sans-serif;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
