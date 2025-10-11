@@ -58,15 +58,17 @@ a {
 
 .main {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     height: 60vh;
 }
 
 .left, .right{
-    border-style: solid;
-    width: 50vw;
+    border-style: none;
+    flex: 1;
+    min-width: 0;
 }
 
 .left {
@@ -74,22 +76,71 @@ a {
     background-repeat: no-repeat;   
     background-position: center center; 
     background-size: cover;
+    
+
 }
 
 .right {
     background-color: #f48460;
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 2.5%;
+    gap: 2em;
+}
+
+/* ...existing code... */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        height: auto; /* allow content to expand when stacked */
+    }
+
+    .left,
+    .right {
+        flex: none;   /* stop flex resizing */
+        width: 100%;  /* each takes full width when stacked */
+        min-width: 0;
+    }
+
+    .left {
+        min-height: clamp(220px, 40vh, 480px); /* ensure a reasonable height */
+    }
 }
 
 h1 {
     font-family: "Italiana", sans-serif;
     font-style: normal;
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
 }
 
 h2 {
     font-family: "Ubuntu Sans", sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+
+.shop-autumn {
+    font-family: "Ubuntu Sans", sans-serif;
+    font-size: 13px;
+    padding: 0.5em 1em;
+    margin: 0.25em;
+    width: 200px;
+    min-width: 200px;
+    height: 4em;
+    border-radius: 2em;
+    border: none;
+    background-color: #fff;
+    flex: 0 0 auto;
+}
+
+.divider-caption > h1{
+    text-align: center;
+    font-size: 2rem;
+    padding: 5% 10%;
 }
