@@ -125,7 +125,7 @@ h2 {
     margin: 0;
 }
 
-.shop-autumn {
+button {
     font-family: "Ubuntu Sans", sans-serif;
     font-size: 13px;
     padding: 0.5em 1em;
@@ -143,4 +143,166 @@ h2 {
     text-align: center;
     font-size: 2rem;
     padding: 5% 10%;
+}
+
+
+/* Wedding Section */
+
+.wedding-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background: #d2f8d2;
+}
+
+.wedding-right {
+    background-image: url('images/wedding-couple.jpg');
+    background-repeat: no-repeat;   
+    background-position: center center; 
+    background-size: cover;
+}
+
+.wedding-left, .wedding-right{
+    border-style: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.wedding-left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+    gap: 2em;
+}
+
+@media (max-width: 768px) {
+    .wedding-main {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .wedding-left, .wedding-right {
+        flex: none;   /* stop flex resizing */
+        width: 100%;  /* each takes full width when stacked */
+        min-width: 0;
+    }
+
+    /* keep the wedding-right visible when stacked (adjust as needed) */
+    .wedding-right {
+        min-height: clamp(220px, 40vh, 480px); /* ensure a reasonable height */
+    }
+}
+
+/* Debut and Quinceanera Section */
+
+.birthday-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background: #f8d2e5;
+}
+
+.birthday-left {
+    background-image: url('images/debut.jpeg');
+    background-repeat: no-repeat;   
+    background-position: center center; 
+    background-size: cover;
+}
+
+.birthday-left, .birthday-right{
+    border-style: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.birthday-right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 2.5%;
+    gap: 2em;
+}
+
+@media (max-width: 768px) {
+    .birthday-main {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .birthday-left, .birthday-right {
+        flex: none;   /* stop flex resizing */
+        width: 100%;  /* each takes full width when stacked */
+        min-width: 0;
+    }
+
+    /* keep the birthday-left visible when stacked (adjust as needed) */
+    .birthday-left {
+        min-height: clamp(220px, 40vh, 480px); /* ensure a reasonable height */
+    }
+}
+
+.divider{
+    height: 2px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+/* Funeral Section */
+
+.funeral-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background: #d2f8f8;
+}
+
+.funeral-right {
+    background-image: url('images/funeral-pic.jpg');
+    background-repeat: no-repeat;   
+    background-position: center center; 
+    background-size: cover;
+}
+
+.funeral-left, .funeral-right{
+    border-style: none;
+    flex: 1;
+    min-width: 0;
+}
+
+.funeral-left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 2.5%;
+    gap: 2em;
+}
+
+@media (max-width: 768px) {
+    .funeral-main {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .funeral-left, .funeral-right {
+        flex: none;   /* stop flex resizing */
+        width: 100%;  /* each takes full width when stacked */
+        min-width: 0;
+    }
+
+    /* keep the funeral-right visible when stacked (adjust as needed) */
+    .funeral-right {
+        min-height: clamp(220px, 40vh, 480px); /* ensure a reasonable height */
+    }
 }
